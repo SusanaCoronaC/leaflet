@@ -1,0 +1,35 @@
+---
+title: "leaflet_project"
+author: "Susana"
+date: "28 -02- 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## University Olympic Stadium 
+
+Is a multi-purpose stadium located inside Ciudad Universitaria in Mexico City. It was built in 1952 and at that time was the largest stadium in Mexico. This stadium has a capacity of 72,000.[2] The first major event held in the stadium was the 1955 Pan American Games. During the 1950s and the 1960s this stadium was used mostly for college American football matches between the largest Mexican public universities at the time: UNAM and IPN. From the late 1950s it was used for football matches, some American football matches and athletics. 
+
+[Wikipedia- University Olympic Stadium](https://en.wikipedia.org/wiki/Estadio_Ol%C3%ADmpico_Universitario)
+
+```{r cars}
+library("leaflet")
+
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=19.33197,lng=-99.19237,
+  popup="<a href='https://www.fundacionunam.org.mx/donde-paso/estadio-olimpico-68-un-lugar-hecho-historia/'>University Olympic Stadium</a>")  %>%
+addRectangles(lat1 = 19.334056, lng1 = -99.194763,
+              lat2 = 19.329166137683316, lng2 = -99.18988613565149)
+ 
+
+
+my_map
+
+
+```
+
+
